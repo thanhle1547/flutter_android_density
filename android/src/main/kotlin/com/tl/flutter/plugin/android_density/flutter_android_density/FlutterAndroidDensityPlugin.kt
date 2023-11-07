@@ -62,16 +62,16 @@ class FlutterAndroidDensityPlugin: FlutterPlugin, MethodCallHandler, ActivityAwa
     channel.setMethodCallHandler(null)
   }
 
-  override fun onAttachedToActivity(@NonNull binding: ActivityPluginBinding) {
-    context = binding.activity
+  override fun onAttachedToActivity(@NonNull activityBinding: ActivityPluginBinding) {
+    context = activityBinding.activity
   }
 
   override fun onDetachedFromActivityForConfigChanges() {
     context = binding.applicationContext
   }
 
-  override fun onReattachedToActivityForConfigChanges(@NonNull binding: ActivityPluginBinding) {
-    context = binding.activity
+  override fun onReattachedToActivityForConfigChanges(@NonNull activityBinding: ActivityPluginBinding) {
+    context = activityBinding.activity
   }
 
   override fun onDetachedFromActivity() {
