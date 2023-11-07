@@ -7,8 +7,6 @@ abstract class FlutterAndroidDensity {
 
   static final MethodChannelFlutterAndroidDensity _instance = MethodChannelFlutterAndroidDensity();
 
-  static DensityConstants density = DensityConstants._();
-
   /// Get the logical density of the display. This is a scaling factor for
   /// the Density Independent Pixel unit, where one DIP is one pixel on
   /// an approximately 160 dpi screen (for example a 240x320, 1.5"x2" screen),
@@ -61,73 +59,72 @@ abstract class FlutterAndroidDensity {
 }
 
 /// The screen density expressed as dots-per-inch.
-final class DensityConstants {
-  DensityConstants._();
+abstract final class AndroidDensityConstants {
+  AndroidDensityConstants._();
 
   /// Intermediate density for screens that sit between [low] (120dpi) and [medium] (160dpi).
-  final int dpi_140 = 140;
+  static const int dpi_140 = 140;
 
   /// Intermediate density for screens that sit between [medium] (160dpi) and [high] (240dpi).
-  final int dpi_180 = 180;
+  static const int dpi_180 = 180;
 
   /// Intermediate density for screens that sit between [medium] (160dpi) and [high] (240dpi).
-  final int dpi_200 = 200;
+  static const int dpi_200 = 200;
 
   /// Intermediate density for screens that sit between [medium] (160dpi) and [high] (240dpi).
-  final int dpi_220 = 220;
+  static const int dpi_220 = 220;
 
   /// Intermediate density for screens that sit between [high] (240dpi) and [xhigh] (320dpi).
-  final int dpi_260 = 260;
+  static const int dpi_260 = 260;
 
   /// Intermediate density for screens that sit between [high] (240dpi) and [xhigh] (320dpi).
-  final int dpi_280 = 280;
+  static const int dpi_280 = 280;
 
   /// Intermediate density for screens that sit between [high] (240dpi) and [xhigh] (320dpi).
-  final int dpi_300 = 300;
+  static const int dpi_300 = 300;
 
   /// Intermediate density for screens that sit somewhere between [xhigh] (320 dpi) and [xxhigh] (480 dpi).
-  final int dpi_340 = 340;
+  static const int dpi_340 = 340;
 
-  /// Intermediate density for screens that sit somewhere between [xhigh] (320 dpi) and [xxhigh] (480 dpi).  final int dpi_360 = 360;
-  final int dpi_400 = 400;
+  /// Intermediate density for screens that sit somewhere between [xhigh] (320 dpi) and [xxhigh] (480 dpi).  static const int dpi_360 = 360;
+  static const int dpi_400 = 400;
 
-  /// Intermediate density for screens that sit somewhere between [xhigh] (320 dpi) and [xxhigh] (480 dpi).  final int dpi_420 = 420;
-  final int dpi_440 = 440;
+  /// Intermediate density for screens that sit somewhere between [xhigh] (320 dpi) and [xxhigh] (480 dpi).  static const int dpi_420 = 420;
+  static const int dpi_440 = 440;
 
   /// Intermediate density for screens that sit somewhere between [xhigh] (320 dpi) and [xxhigh] (480 dpi).
-  final int dpi_450 = 450;
+  static const int dpi_450 = 450;
 
   /// Intermediate density for screens that sit somewhere between [xxhigh] (480 dpi) and [xxxhigh] (640 dpi).
-  final int dpi_520 = 520;
+  static const int dpi_520 = 520;
 
   /// Intermediate density for screens that sit somewhere between [xxhigh] (480 dpi) and [xxxhigh] (640 dpi).
-  final int dpi_560 = 560;
+  static const int dpi_560 = 560;
 
   /// Intermediate density for screens that sit somewhere between [xxhigh] (480 dpi) and [xxxhigh] (640 dpi).
-  final int dpi_600 = 600;
+  static const int dpi_600 = 600;
 
   /// The reference density used throughout the system.
-  // ignore: non_constant_identifier_names
-  final int defaultDpi = 160;
+  static const int defaultDpi = 160;
 
   /// Standard quantized DPI for high-density screens.
-  final int high = 240;
+  static const int high = 240;
 
   /// Standard quantized DPI for low-density screens.
-  final int low = 120;
+  static const int low = 120;
 
   /// Standard quantized DPI for medium-density screens.
-  final int medium = 160;
+  static const int medium = 160;
 
   /// This is a secondary density, added for some common screen configurations.
-  final int tv = 213;
+  static const int tv = 213;
 
   /// Standard quantized DPI for extra-high-density screens.
-  final int xhigh = 320;
+  static const int xhigh = 320;
 
   /// Standard quantized DPI for extra-extra-high-density screens.
-  final int xxhigh = 480;
+  static const int xxhigh = 480;
 
   /// Standard quantized DPI for extra-extra-extra-high-density screens.
-  final int xxxhigh = 640;
+  static const int xxxhigh = 640;
 }
