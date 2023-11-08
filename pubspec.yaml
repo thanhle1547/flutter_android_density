@@ -1,6 +1,6 @@
 name: flutter_android_density
 description: A Flutter plugin allows getting Android density.
-version: 0.1.0
+version: 0.1.1
 homepage:
 
 environment:
