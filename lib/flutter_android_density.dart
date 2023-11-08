@@ -86,10 +86,16 @@ abstract final class AndroidDensityConstants {
   /// Intermediate density for screens that sit somewhere between [xhigh] (320 dpi) and [xxhigh] (480 dpi).
   static const int dpi_340 = 340;
 
-  /// Intermediate density for screens that sit somewhere between [xhigh] (320 dpi) and [xxhigh] (480 dpi).  static const int dpi_360 = 360;
+  /// Intermediate density for screens that sit somewhere between [xhigh] (320 dpi) and [xxhigh] (480 dpi).
+  static const int dpi_360 = 360;
+
+  /// Intermediate density for screens that sit somewhere between [xhigh] (320 dpi) and [xxhigh] (480 dpi).
   static const int dpi_400 = 400;
 
-  /// Intermediate density for screens that sit somewhere between [xhigh] (320 dpi) and [xxhigh] (480 dpi).  static const int dpi_420 = 420;
+  /// Intermediate density for screens that sit somewhere between [xhigh] (320 dpi) and [xxhigh] (480 dpi).
+  static const int dpi_420 = 420;
+
+  /// Intermediate density for screens that sit somewhere between [xhigh] (320 dpi) and [xxhigh] (480 dpi).
   static const int dpi_440 = 440;
 
   /// Intermediate density for screens that sit somewhere between [xhigh] (320 dpi) and [xxhigh] (480 dpi).
