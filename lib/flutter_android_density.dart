@@ -9,16 +9,36 @@ abstract class FlutterAndroidDensity {
 
   /// Get the logical density of the display. This is a scaling factor for
   /// the Density Independent Pixel unit, where one DIP is one pixel on
-  /// an approximately 160 dpi screen (for example a 240x320, 1.5"x2" screen),
+  /// an approximately 160 dpi screen (for example a 240×320, 1.5″×2″ screen),
   /// providing the baseline of the system's display. Thus on a 160dpi screen
   /// this density value will be 1; on a 120 dpi screen it would be .75; etc.
+  ///
+  /// This value does **not** exactly **follow** the real **screen size**
+  /// (the physical pixels per inch in each dimension),
+  /// but rather is used to scale the size of the overall UI in steps
+  /// based on significant changes in the display dpi. For example,
+  /// a 240x320 screen will have a density of `1` even if its width
+  /// is 1.8″, 1.3″, etc. However, if the screen resolution is increased
+  /// to 320×480 but the screen size remained 1.5″×2″
+  /// then the density would be increased (probably to 1.5).
+  ///
+  /// See also:
+  ///
+  ///  * [DisplayMetrics.density](https://developer.android.com/reference/android/util/DisplayMetrics#density)
   static Future<double?> getDensity() {
     if (!Platform.isAndroid) return Future.value(null);
 
     return _instance.getDensity();
   }
 
-  /// Get the screen density expressed as dots-per-inch.
+  /// Get the screen density expressed as dots-per-inch (DPI).
+  ///
+  /// This value is an approximation derived from the logical density
+  /// of the display.
+  ///
+  /// It may not reflect the actual physical DPI of the screen.
+  ///
+  /// May be any one of the constants defined in [AndroidDensityConstants].
   static Future<int?> getDensityDpi() {
     if (!Platform.isAndroid) return Future.value(null);
 
