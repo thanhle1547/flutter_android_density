@@ -32,5 +32,5 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.tl.flutter.plugin.android_density.flutter_android_density
+        package: com.tl.flutter.plugin.android_density
         pluginClass: FlutterAndroidDensityPlugin

@@ -1,4 +1,4 @@
-package com.tl.flutter.plugin.android_density.flutter_android_density
+package com.tl.flutter.plugin.android_density.android_density
 
 import android.content.Context
 import io.flutter.plugin.common.MethodCall

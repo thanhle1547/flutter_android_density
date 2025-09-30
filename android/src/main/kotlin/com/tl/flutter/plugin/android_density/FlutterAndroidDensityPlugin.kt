@@ -1,8 +1,7 @@
-package com.tl.flutter.plugin.android_density.flutter_android_density
+package com.tl.flutter.plugin.android_density
 
 import android.content.Context
 import android.util.TypedValue
-import androidx.annotation.NonNull
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
@@ -26,14 +25,14 @@ class FlutterAndroidDensityPlugin: FlutterPlugin, MethodCallHandler, ActivityAwa
     private const val channelName: String = "flutter_android_density"
   }
 
-  override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
+  override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
     binding = flutterPluginBinding
     channel = MethodChannel(flutterPluginBinding.binaryMessenger, channelName)
     channel.setMethodCallHandler(this)
     context = flutterPluginBinding.applicationContext
   }
 
-  override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
+  override fun onMethodCall(call: MethodCall, result: Result) {
     val displayMetrics = context.resources.displayMetrics
 
     when (call.method) {
@@ -58,11 +57,11 @@ class FlutterAndroidDensityPlugin: FlutterPlugin, MethodCallHandler, ActivityAwa
     }
   }
 
-  override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
+  override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {
     channel.setMethodCallHandler(null)
   }
 
-  override fun onAttachedToActivity(@NonNull activityBinding: ActivityPluginBinding) {
+  override fun onAttachedToActivity(activityBinding: ActivityPluginBinding) {
     context = activityBinding.activity
   }
 
@@ -70,7 +69,7 @@ class FlutterAndroidDensityPlugin: FlutterPlugin, MethodCallHandler, ActivityAwa
     context = binding.applicationContext
   }
 
-  override fun onReattachedToActivityForConfigChanges(@NonNull activityBinding: ActivityPluginBinding) {
+  override fun onReattachedToActivityForConfigChanges(activityBinding: ActivityPluginBinding) {
     context = activityBinding.activity
   }
 
